@@ -1,5 +1,5 @@
 import numpy as np
-from mfccspec import mfccspec
+from mspec import mspec
 
 def runSpec(speech, fs):
 
@@ -13,7 +13,7 @@ def runSpec(speech, fs):
 
 	hamming = lambda T: (0.54-0.46*np.cos(2*np.pi*np.arange(0,T).reshape((-1, 1))/(T-1)))
 
-	SPEC = mfccspec(speech, fs, Tw, Ts, alpha, hamming, R, M, N, L)
+	SPEC = mspec(speech, fs, Tw, Ts, alpha, hamming, R, M, N, L)
 
 	return SPEC
 
