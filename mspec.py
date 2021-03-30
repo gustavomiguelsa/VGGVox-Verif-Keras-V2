@@ -4,7 +4,7 @@ from scipy.signal import lfilter
 import numpy as np
 import math as mt
 
-def mfccspec(speech, fs, Tw, Ts, alpha, window, R, M, N, L):
+def mspec(speech, fs, Tw, Ts, alpha, window, R, M, N, L):
 
 	
 	if( max(abs(speech)) <= 1 ):
